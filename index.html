@@ -6,22 +6,29 @@
     <link rel="stylesheet" type="text/css" href="assets/css/style.css">
     
     <script src="https://code.jquery.com/jquery-3.3.1.min.js"></script>
-    <script src="assets/javasript/game.js"></script>
+    
   </head>
 
-  <body onLoad="setup();">
-    <div>
-      <p class="instructions">Welcome to the crystal game<br>
-        Use crystals to add to the wizard's number to win<br>
-        If you go over the wizard's value, you lose!<br>
-        Good Luck!<br>
-      </p>
+  <body>
+    <div class="container">
+      <div>
+        <p class="instructions">Welcome to the crystal game...<br>
+          - Use crystals to add to the wizard's number to win<br>
+          - If you go over the wizard's value, you lose!<br>
+          Good Luck!<br>
+        </p>
+      </div>
+      
+      <div>
+        <img class="crystal" id="cr1" onClick="addValue1();" src="assets/images/crystal-1.png">
+        <img class="crystal" id="cr2" onClick="addValue2();" src="assets/images/crystal-2.png">
+        <img class="crystal" id="cr3" onClick="addValue3();" src="assets/images/crystal-3.png">
+        <img class="crystal" id="cr4" onClick="addValue4();" src="assets/images/crystal-4.png">
+      </div>
+      <div id="crSum">0</div>
     </div>
-    <div>
-      <img class="crystal" id="cr1" src="assets/images/crystal-1.png">
-      <img class="crystal" id="cr2" src="assets/images/crystal-2.png">
-      <img class="crystal" id="cr3" src="assets/images/crystal-3.png">
-      <img class="crystal" id="cr4" src="assets/images/crystal-4.png">
-    </div>
+    <div id="wizNumber">0</div>
+
+    <script src="assets/javasript/game.js"></script>
   </body>
 </html>

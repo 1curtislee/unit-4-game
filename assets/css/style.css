@@ -3,18 +3,42 @@ body {
   background-image: url("../images/fantasy-background.png");
   background-repeat: no-repeat;
   background-size: cover;
+  font-family: 'Trebuchet MS', 'Lucida Sans Unicode', 'Lucida Grande', 'Lucida Sans', Arial, sans-serif;
+}
+
+.container {
+  float: left;
+  
 }
 
 .instructions {
   color: white;
-  font-family: 'Trebuchet MS', 'Lucida Sans Unicode', 'Lucida Grande', 'Lucida Sans', Arial, sans-serif;
-  font-size: 40px;
+  font-size: 30px;
 }
 
 .crystal {
   height: 200px;
-  padding: 20px;
+  margin: 20px;
+  background-color: seagreen;
+  background-size: cover;
 }
 .crystal:hover {
   cursor: pointer;
+}
+
+#crSum {
+  font-size: 40px;
+  color: white;
+  background-color: darkslategray;
+  padding: 20px;
+
+}
+
+#wizNumber {
+  font-size: 40px;
+  color: white;
+  float: right;
+  background-color: darkslategray;
+  padding: 20px;
+  position: relative;
 }

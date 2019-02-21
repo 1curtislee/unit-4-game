@@ -1,0 +1,2 @@
+issues:
+- hover on only png, not element box
