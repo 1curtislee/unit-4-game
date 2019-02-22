@@ -15,11 +15,13 @@ body {
 
 .container {
   float: left;
-  
+  position: relative;
+  left: 5%;
 }
 
 .instructions {
   color: white;
+  text-align: center;
   font-size: 30px;
   font-weight: 10px;
 }
