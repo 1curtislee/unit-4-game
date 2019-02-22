@@ -1,42 +1,64 @@
-// PIECES:
-// Title banner
-// instructions div
-// random number div
-// wins/losses div
-// 4 crystals, each with random amounts (change every time);
-// user total
 
-// FUNCTIONS:
-// each crystal, when clicked adds to user's score
-// if match achieved: wins goes up by 1, game resets
-// if user goes over: losses goes up by 1, game resets
+$(document).ready(function(){
+  var random = Math.floor(Math.random()*101+19)
+  $("#wizNumber").text(random);
 
+  var cr1 = Math.floor(Math.random()*11+1);
+  var cr2 = Math.floor(Math.random()*11+1);
+  var cr3 = Math.floor(Math.random()*11+1);
+  var cr4 = Math.floor(Math.random()*11+1);
 
-function addValue1() {
-  console.log("you clicked crystal 1")
+  var playerTotal = 0;
+  var wins = 0;
+  var losses = 0;
+
+$("#wins").text("Wins: " + wins);
+$("#losses").text("Losses: " + losses);
+
+function reset() {
+  var random = Math.floor(Math.random()*101+19)
+  $("#wizNumber").text(random);
+
+  var cr1 = Math.floor(Math.random()*11+1);
+  var cr2 = Math.floor(Math.random()*11+1);
+  var cr3 = Math.floor(Math.random()*11+1);
+  var cr4 = Math.floor(Math.random()*11+1);
+  var playerTotal = 0;
+  $("#crSum").text(playerTotal);
 }
-function addValue2() {
-  console.log("you clicked crystal 2")
+
+//game win or game loss functions
+function winner() {
+  alert ("You Won!");
+  wins++
+  $("#wins").text(wins);
+  reset();
 }
-function addValue3() {
-  console.log("you clicked crystal 3")
-}
-function addValue4() {
-  console.log("you clicked crystal 4")
+function loser() {
+  alert ("BUST!");
+  losses++
+  $("#losses").text(losses);
 }
 
-var cr1 = 1;
-var cr2 = 2;
-var cr3 = 3;
-var cr4 = 4;
-var sum = cr1 + cr2 + cr3 + cr4;
-$("#crSum").text(sum);
-function crSum() {
-  
-} 
+//crystals
+$("#cr1").on('click', function(){
+  playerTotal = playerTotal + cr1;
+  $('#crSum').text(playerTotal);
+})
+$("#cr2").on('click', function(){
+  playerTotal = playerTotal + cr2;
+  $('#crSum').text(playerTotal);
+})
+$("#cr3").on('click', function(){
+  playerTotal = playerTotal + cr3;
+  $('#crSum').text(playerTotal);
+})
+$("#cr4").on('click', function(){
+  playerTotal = playerTotal + cr4;
+  $('#crSum').text(playerTotal);
+})
 
-var x = document.getElementById("crSum");
-  x.innerText = sum;
-console.log(sum);
+
+});
 
 

@@ -10,6 +10,7 @@
   </head>
 
   <body>
+    <div id=topBanner>Crystal Match</div>
     <div class="container">
       <div>
         <p class="instructions">Welcome to the crystal game...<br>
@@ -20,14 +21,20 @@
       </div>
       
       <div>
-        <img class="crystal" id="cr1" onClick="addValue1();" src="assets/images/crystal-1.png">
-        <img class="crystal" id="cr2" onClick="addValue2();" src="assets/images/crystal-2.png">
-        <img class="crystal" id="cr3" onClick="addValue3();" src="assets/images/crystal-3.png">
-        <img class="crystal" id="cr4" onClick="addValue4();" src="assets/images/crystal-4.png">
+        <img class="crystal" id="cr1" src="assets/images/crystal-1.png">
+        <img class="crystal" id="cr2" src="assets/images/crystal-2.png">
+        <img class="crystal" id="cr3" src="assets/images/crystal-3.png">
+        <img class="crystal" id="cr4" src="assets/images/crystal-4.png">
       </div>
       <div id="crSum">0</div>
+      <div style="background-color:darkslategray;">
+        <span id="wins"></span><br>
+        <span id="losses"></span>
+      </div>
+      
     </div>
     <div id="wizNumber">0</div>
+    
 
     <script src="assets/javasript/game.js"></script>
   </body>
