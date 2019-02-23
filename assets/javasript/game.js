@@ -1,5 +1,6 @@
 
-$(document).ready(function(){
+/*$(document).ready(function() {
+  console.log("onLoad function run")
   var random = Math.floor(Math.random()*101+19)
   $("#wizNumber").text(random);
 
@@ -14,8 +15,33 @@ $(document).ready(function(){
 
 $("#wins").text("Wins: " + wins);
 $("#losses").text("Losses: " + losses);
+$(".crSum").text(playerTotal);
+*/
+
+// testing
+var cr1 = Math.floor(Math.random()*11+1);
+var cr2 = Math.floor(Math.random()*11+1);
+var cr3 = Math.floor(Math.random()*11+1);
+var cr4 = Math.floor(Math.random()*11+1);
+
+var playerTotal = 0;
+var wins = 0;
+var losses = 0;
+var random = Math.floor(Math.random()*101+19)
+
+function setup() {
+  console.log("onLoad function run")
+  
+  $("#wizNumber").text(random);
+
+  $("#wins").text("Wins: " + wins);
+  $("#losses").text("Losses: " + losses);
+  $(".crSum").text(playerTotal);
+}
+// end testing
 
 function reset() {
+  console.log("reset(); run")
   random = Math.floor(Math.random()*101+19)
   $("#wizNumber").text(random);
 
@@ -26,6 +52,13 @@ function reset() {
   playerTotal = 0;
   $("#crSum").text(playerTotal);
 }
+
+$(".crystal").hover(function() {
+  $(this).css({opacity: 0.7});
+},
+function() {
+  $(this).css({opacity: 1});
+});
 
 //game win or game loss functions
 function winner() {
@@ -65,13 +98,14 @@ $("#cr4").on('click', function(){
 
 //win/loss:
 function end() {
-  console.log("did you win yet?");
   if (playerTotal == random) {
     winner();
-  } else if (playerTotal > random) {
+  }
+  if (playerTotal > random) {
     loser();
-  } else {null}
+  }
 }
-});
+
+//});
 
 

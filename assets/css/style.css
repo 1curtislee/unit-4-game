@@ -52,5 +52,7 @@ body {
   float: right;
   background-color: darkslategray;
   padding: 20px;
-  position: relative;
+  position: absolute;
+  right: 20%;
+  top: 450%;
 }
